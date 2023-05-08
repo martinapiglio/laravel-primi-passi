@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+
+    //DATA ARRAY METHOD
+    // $greeting = ['name' => 'Ciao Mondo!'];
+    // return view('home', $greeting);
+
+    //VARIABLES METHOD
+    $greeting = 'Hello World!';
+    return view('home', compact('greeting'));
 });

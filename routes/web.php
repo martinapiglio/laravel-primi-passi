@@ -21,5 +21,62 @@ Route::get('/', function () {
 
     //VARIABLES METHOD
     $greeting = 'Hello World!';
-    return view('home', compact('greeting'));
-});
+
+    // navbar links
+    $links = [
+        'home',
+        'about',
+        'contact',
+        'careers'
+    ];
+
+    return view('home', compact('greeting', 'links'));
+})->name('home');
+
+Route::get('/about', function () {
+
+    //page title
+    $title = 'About';
+
+    // navbar links
+    $links = [
+        'home',
+        'about',
+        'contact',
+        'careers'
+    ];
+
+    return view('about', compact('title', 'links'));
+})->name('about');
+
+Route::get('/contact', function () {
+
+    //page title
+    $title = 'Contact us';
+
+    // navbar links
+    $links = [
+        'home',
+        'about',
+        'contact',
+        'careers'
+    ];
+
+    return view('contact', compact('title', 'links'));
+})->name('contact');
+
+Route::get('/careers', function () {
+
+    //page title
+    $title = 'Careers';
+
+    // navbar links
+    $links = [
+        'home',
+        'about',
+        'contact',
+        'careers'
+    ];
+
+    return view('careers', compact('title', 'links'));
+})->name('careers');
